@@ -1,0 +1,18 @@
+h1 {
+    color: #456;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 250%;
+}
+
+#angularLogo:hover
+{
+    transform: rotate(180deg);
+    transition: transform 1s ease-in;
+
+}
+
+#angularLogo
+{
+    transition: transform 1s ease-in;
+
+}
