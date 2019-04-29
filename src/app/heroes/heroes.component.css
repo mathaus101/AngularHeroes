@@ -1,7 +1,9 @@
 /* HeroesComponent's private CSS styles */
 .selected {
     background-color: #CFD8DC !important;
-    color: white;
+    /* color: white; */
+    left: 1em !important;
+    transition: left .2s ease-in, background-color .2s ease-in;    
   }
   .heroes {
     margin: 0 0 2em 0;
@@ -22,13 +24,12 @@
   }
   .heroes li.selected:hover {
     background-color: #BBD8DC !important;
-    color: white;
+    /* color: white; */
   }
   .heroes li:hover {
     color: #607D8B;
     background-color: #DDD;
-    left: 1em;
-    transition: left .2s ease-in, background-color .2s ease-in;
+
   }
   .heroes .text {
     position: relative;
