@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -16,7 +17,8 @@ export class HeroesComponent implements OnInit {
   //You define private styles either inline in the @Component.styles array or as stylesheet file(s) identified
   // in the @Component.styleUrls array.
 
-  constructor(private heroService: HeroService) {   // Declares a dependency 
+  constructor(private heroService: HeroService,
+    private messageService: MessageService) {   // Declares a dependency. THe DI container instantiates the object
 
     // While you could call getHeroes() in the constructor, that's not the best practice.
 
@@ -43,11 +45,12 @@ export class HeroesComponent implements OnInit {
     //     this.style.webkitAnimationPlayState = "paused";
     //   });
 
+    this.messageService.add(`Selected ${hero.name}`);
 
     this.selectedHero = hero;
     var element = document.querySelector('#angularLogo');
     element.classList.remove('logoSpin');    
-    void element.offsetWidth;
+   // void element.offsetWidth;
     element.classList.add('logoSpin');
 
   }
