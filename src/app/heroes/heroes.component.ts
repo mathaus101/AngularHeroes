@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heros';
-
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -11,18 +10,26 @@ import { HEROES } from '../mock-heros';
 
 export class HeroesComponent implements OnInit {
 
-  heroes = HEROES;
+  heroes: Hero[];
   selectedHero: Hero;
 
   //You define private styles either inline in the @Component.styles array or as stylesheet file(s) identified in the @Component.styleUrls array.
 
-  constructor() { }
+  constructor(private heroService: HeroService) {   // Declares a dependency 
+
+  }   
 
   ngOnInit() {
+    this.getHereos();
   }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  getHereos(): void {
+    this.heroes = this.heroService.getHeroes();
+
   }
     
 
