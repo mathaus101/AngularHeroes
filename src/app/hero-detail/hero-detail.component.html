@@ -1,0 +1,12 @@
+<div *ngIf="hero">  <!-- When hero is undefined, ngIf removes the hero detail from the DOM -->
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div><span>name: </span>{{hero.name}}</div>
+  
+  <div>
+    <label for="lblName">name:</label> 
+    <input id="lblName" [(ngModel)]="hero.name" placeholder="name" />
+  </div> 
+
+ </div>
