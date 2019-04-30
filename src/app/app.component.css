@@ -4,12 +4,28 @@ h1 {
     font-size: 250%;
 }
 
+.logoSpin {
+    animation: wobble .5s 1;
+  }
+
 #angularLogo:hover
 {
     transform: rotate(180deg);
     transition: transform 1s ease-in;
-
 }
+
+@keyframes wobble {
+
+    50% {
+      transform: rotate(-10deg);
+      animation-timing-function: linear;
+    }
+
+   
+    100% {
+    transform: rotate(0deg);
+    }                
+  }
 
 #angularLogo
 {

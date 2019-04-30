@@ -15,6 +15,7 @@ export class HeroService {
 
   getHeroes(): Hero[] {
 
+    //console.log(HEROES);
     return HEROES;
 
   }

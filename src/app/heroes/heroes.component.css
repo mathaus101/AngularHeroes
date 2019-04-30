@@ -5,6 +5,7 @@
     left: 1em !important;
     transition: left .2s ease-in, background-color .2s ease-in;    
   }
+
   .heroes {
     margin: 0 0 2em 0;
     list-style-type: none;
