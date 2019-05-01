@@ -1,5 +1,4 @@
 h1 {
-    color: #456;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 250%;
 }
@@ -21,7 +20,6 @@ h1 {
       animation-timing-function: linear;
     }
 
-   
     100% {
     transform: rotate(0deg);
     }                
@@ -31,4 +29,10 @@ h1 {
 {
     transition: transform 1s ease-in;
 
+}
+
+#container
+{
+  display: flex;
+  justify-content: space-between;
 }
