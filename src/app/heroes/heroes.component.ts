@@ -56,8 +56,12 @@ export class HeroesComponent implements OnInit {
   }
 
   getHereos(): void {
-    this.heroes = this.heroService.getHeroes();
-    //console.log(this.heroService.getHeroes());
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);  // This code will be run once the array items are available. ie. 
+                                                    // 'this.hereos = heroes' is a callback function.
+
+
+    
 
   }
     
