@@ -4,15 +4,17 @@
  <ul class="heroes">
    <!-- Generates an <li></li> for each array element, adds 'selected' css class if current element === selectedHero.
    How the objects are compared for sameness is an interesting question (by reference?) -->
-   <li  *ngFor="let hero of heroes"    
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-     <span class="badge">{{hero.id}}</span> {{hero.name}}
+   <li  *ngFor="let hero of heroes" >
+        <!-- [class.selected]="hero === selectedHero" -->
+        <!-- (click)="onSelect(hero)"> -->
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
    </li>
  </ul>
-
+</div>
  <!-- When the user clicks a hero in the list, the selectedHero changes (in the onSelect func). 
  When the selectedHero changes, the property binding updates hero 
  and the HeroDetailComponent displays the new hero. -->
-</div>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

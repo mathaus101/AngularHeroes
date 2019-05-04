@@ -31,7 +31,7 @@ h1 {
 
 }
 
-#container
+#myContainer
 {
   display: flex;
   justify-content: space-between;

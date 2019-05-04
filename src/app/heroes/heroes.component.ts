@@ -45,12 +45,13 @@ export class HeroesComponent implements OnInit {
     //     this.style.webkitAnimationPlayState = "paused";
     //   });
 
-    this.messageService.add(`Selected ${hero.name}`);
+    // Call to message servie are now made from the HeroService itself
+    //this.messageService.add(`Selected ${hero.name}`);
 
     this.selectedHero = hero;
     var element = document.querySelector('#angularLogo');
     element.classList.remove('logoSpin');    
-   // void element.offsetWidth;
+    void element.offsetWidth;
     element.classList.add('logoSpin');
 
   }

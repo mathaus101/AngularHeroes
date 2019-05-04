@@ -11,6 +11,7 @@
     list-style-type: none;
     padding: 0;
     width: 15em;
+    min-width: 15em;
   }
   .heroes li {
     cursor: pointer;
